@@ -15,6 +15,21 @@ $item->picture_url = "https://moises-mp-ecommerce-php.herokuapp.com".$_POST['img
 $item->quantity = 1;
 $item->unit_price = $_POST['price'];
 
+$payer = new MercadoPago\Payer();
+$payer->name = "Lalo";
+$payer->surname = "Landa";
+$payer->email = "test_user_81131286@testuser.com";
+$payer->phone = array(
+    "area_code" => "+52",
+    "number" => "55 4973 7300"
+);
+  
+$payer->address = array(
+    "street_name" => "Insurgentes Sur",
+    "street_number" => 1602,
+    "zip_code" => "03940"
+);
+
 // Crea un objeto de preferencia
 $preference = new MercadoPago\Preference();
 $preference->items = array($item);
@@ -38,21 +53,6 @@ $preference->back_urls = array(
 $preference->auto_return = "approved";
 $preference->notification_url = "https://webhook.site/7bc7931e-e5ba-47bd-b13d-5991e79dce63";
 $preference->save();
-
-$payer = new MercadoPago\Payer();
-$payer->name = "Lalo";
-$payer->surname = "Landa";
-$payer->email = "test_user_81131286@testuser.com";
-$payer->phone = array(
-    "area_code" => "+52",
-    "number" => "55 4973 7300"
-);
-  
-$payer->address = array(
-    "street_name" => "Insurgentes Sur",
-    "street_number" => 1602,
-    "zip_code" => "03940"
-);
 ?>
 
 <!DOCTYPE html>
