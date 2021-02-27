@@ -7,20 +7,20 @@ MercadoPago\SDK::setAccessToken('APP_USR-1159009372558727-072921-8d0b9980c749498
 MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
 
 $payer = new MercadoPago\Payer();
-$payer->id = "655253974";
-$payer->first_name = "Lalo";
-$payer->last_name = "Landa";
-$payer->email = "test_user_81131286@testuser.com";
-$payer->phone = array(
-    "area_code" => "52",
-    "number" => "5549737300"
-);
+  $payer->name = "Charles";
+  $payer->surname = "Luevano";
+  $payer->email = "charles@hotmail.com";
+  $payer->date_created = "2018-06-02T12:58:41.425-04:00";
+  $payer->phone = array(
+    "area_code" => "",
+    "number" => "949 128 866"
+  );
   
-$payer->address = array(
-    "street_name" => "Insurgentes Sur",
-    "street_number" => 1602,
-    "zip_code" => "03940"
-);
+  $payer->address = array(
+    "street_name" => "Cuesta Miguel Armendáriz",
+    "street_number" => 1004,
+    "zip_code" => "11020"
+  );
 
 // Crea un ítem en la preferencia
 $item = new MercadoPago\Item();
