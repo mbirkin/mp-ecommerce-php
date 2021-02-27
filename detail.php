@@ -16,6 +16,7 @@ $item->quantity = 1;
 $item->unit_price = $_POST['price'];
 
 $payer = new MercadoPago\Payer();
+$payer->id = "655253974";
 $payer->name = "Lalo";
 $payer->surname = "Landa";
 $payer->email = "test_user_81131286@testuser.com";
